@@ -15,6 +15,7 @@ import Orders from './components/DashBoard/Orders/Orders';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Bookings from './components/DashBoard/Bookings/Bookings';
 import AddAdmin from './components/DashBoard/AddAdmin/AddAdmin';
+import AddReviews from './components/AddReviews/AddReviews';
 
 export const UserContext = createContext();
 
@@ -37,8 +38,14 @@ function App() {
           <Route path="/addAdmin">
             <AddAdmin></AddAdmin>
           </Route>
+          <PrivateRoute path="/admin">
+            <SideBar></SideBar>
+          </PrivateRoute>
           <Route path="/addService">
             <AddService></AddService>
+          </Route>
+          <Route path="/addReview">
+            <AddReviews></AddReviews>
           </Route>
           <Route path="/orderList">
             <Orders></Orders>

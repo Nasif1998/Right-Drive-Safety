@@ -5,7 +5,7 @@ import Description from '../Description/Description';
 import Footer from '../Footer/Footer';
 
 import Header from '../Header/Header';
-import Review from '../Review/Review';
+import Reviews from '../Reviews/Reviews';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
             <Header></Header>
             <Description></Description>
             <Services></Services>
-            <Review></Review>
+            <Reviews></Reviews>
             <Contact></Contact>
             <Footer></Footer>
         </div>
