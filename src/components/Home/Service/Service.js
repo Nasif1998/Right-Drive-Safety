@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Service.css';
 
 const Service = (props) => {
     const { serviceName, price, imageURL, _id } = props.service;
@@ -24,7 +25,7 @@ const Service = (props) => {
                     <button style={{ backgroundColor: 'orange' }}>Select</button>
                 </Link></p> */}
                 <p> <Link to={`/checkout/${_id}`}>
-                    <button style={{ backgroundColor: 'blue', marginLeft: '5%' }}>Buy Now</button>
+                    <button style={{ backgroundColor: 'blue', marginLeft: '5%', borderRadius: '12px' }}>Buy Now</button>
                 </Link> </p>
 
             </div>

@@ -27,7 +27,7 @@ const CheckOut = () => {
     const newId = _id;
     console.log(newId);
 
-    const { serviceName, price } = service;
+    const { serviceName, price, status } = service;
 
     // const handleCheckOut = () => {
 
@@ -63,12 +63,14 @@ const CheckOut = () => {
                     <th>Name</th>
                     <th>Email</th>
                     <th>Price</th>
+                    <th>Status</th>
                 </tr>
                 <tr>
                     <td>{serviceName}</td>
                     <td>{loggedInUser.name}</td>
                     <td>{loggedInUser.email}</td>
                     <td>{price}</td>
+                    <td>Pending</td>
                 </tr>
             </table>
             <div style={{display: shippingData ? 'none' : 'block'}}>
