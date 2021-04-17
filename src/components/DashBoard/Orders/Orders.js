@@ -7,7 +7,7 @@ const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:9002/orderDetails')
+        fetch('http://localhost:9003/orderDetails')
         .then(res => res.json())
         .then(data => setOrder(data))
     },[])

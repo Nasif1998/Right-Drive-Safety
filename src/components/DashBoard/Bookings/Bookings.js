@@ -8,8 +8,8 @@ const Bookings = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        // fetch('http://localhost:9002/booings?email=' +loggedInUser.email)
-        fetch('http://localhost:9002/bookings?email=' +loggedInUser.email)
+        // fetch('http://localhost:9003/booings?email=' +loggedInUser.email)
+        fetch('http://localhost:9003/bookings?email=' +loggedInUser.email)
         .then(res => res.json())
         .then(data => setBookings(data))
     },[])

@@ -13,7 +13,7 @@ const AddReviews = () => {
             from: data.from,
             imageURL: imageURL
         };
-        const url = `http://localhost:9002/addReview`;
+        const url = `http://localhost:9003/addReview`;
 
         console.log(eventData)
 

@@ -8,7 +8,7 @@ const ManageServices = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:9002/manageServices')
+        fetch('http://localhost:9003/manageServices')
             .then(res => res.json())
             .then(data => setManages(data))
     }, [])

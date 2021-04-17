@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 const ManageList = ({manage}) => {
     const history = useHistory();
     const deleteEvent = (id, event) => {
-        const url = `http://localhost:9002/deleteEvent/${id}`
+        const url = `http://localhost:9003/deleteEvent/${id}`
         fetch(url, {
             method: 'DELETE'
         })

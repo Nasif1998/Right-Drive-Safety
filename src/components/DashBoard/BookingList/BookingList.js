@@ -9,6 +9,7 @@ const BookingList = ({booking}) => {
                     <th className="text-secondary" scope="col">Service Name</th>
                     <th className="text-secondary" scope="col">Price</th>
                     <th className="text-secondary" scope="col">Payment Id</th>
+                    <th className="text-secondary" scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,7 @@ const BookingList = ({booking}) => {
                             <td>{order.serviceName}</td>
                             <td>{order.price}</td>
                             <td>{order.paymentId}</td>
+                            <td>{order.status}</td>
                         </tr>
                     )
                 }

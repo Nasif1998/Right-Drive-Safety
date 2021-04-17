@@ -12,7 +12,7 @@ const AddAdmin = () => {
             email: data.email
         };
 
-        const url = `http://localhost:9002/addAdmin`;
+        const url = `http://localhost:9003/addAdmin`;
 
         console.log(eventData)
 
