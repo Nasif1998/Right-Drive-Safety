@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 
 const OrderList = ({ orders }) => {
+    const [status, setStatus] = useState(null);
     const history = useHistory();
     const deleteOrder = (id, event) => {
         const url = `https://limitless-scrubland-20028.herokuapp.com/deleteOrder/${id}`
@@ -18,41 +19,24 @@ const OrderList = ({ orders }) => {
 
             })
     }
-
-    function loadOrder(id) {
-        fetch(`https://limitless-scrubland-20028.herokuapp.com/orderDetails/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const update = document.getElementById('update');
-                update.innerHTML = `
-            <h3>Update: ${data._id}</h3>
-            Status: <input type="text" value="${data.status}" id="status">
-            <br>
-            <button onClick="updateProduct('${data._id}')">Submit</button>
-                `;
-                
-            })
-
-            
-    }
-
-    function updateProduct(id){
+    
+    function updateStatus(id){
         // console.log('updating');
-        const status = document.getElementById('status').value;
-        const product = {id, status};
-        fetch(`/update/${id}`, {
-            method: 'PATCH',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(product)
-        })
-        .then(res => res.json())
-        .then(result => {
-            // console.log('updated');
-            if(result){
-                // document.getElementById('products').innerHTML= '';
-            }
-        })
+    //     setUpdateStatus("")
+    //     const updateStatus = {status: 'Done'};
+    //     fetch(`https://limitless-scrubland-20028.herokuapp.com/update/${id}`, {
+    //         method: 'PATCH',
+    //         headers: {'Content-Type': 'application/json'},
+    //         body: JSON.stringify(updateStatus)
+    //     })
+    //     .then(res => res.json())
+    //     .then(result => {
+    //         // console.log('updated');
+    //         if(result){
+    //             // document.getElementById('products').innerHTML= '';
+    //         }
+    //     })
+
     }
 
 
@@ -79,7 +63,7 @@ const OrderList = ({ orders }) => {
                                 <td>{order.serviceName}</td>
                                 <td>{order.price}</td>
                                 <td>{order.status}</td>
-                                <td><button onClick={() => deleteOrder(order._id)}>Delete</button> <button onClick={() => loadOrder(order._id)}>Update Status</button></td>
+                                <td><button onClick={() => deleteOrder(order._id)}>Delete</button> <button onClick={() => updateStatus(order._id)}>Update Status</button></td>
                             </tr>
                         )
                     }
