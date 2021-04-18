@@ -29,13 +29,13 @@ const OrderList = ({ orders }) => {
             <h3>Update: ${data._id}</h3>
             Status: <input type="text" value="${data.status}" id="status">
             <br>
-            <button onclick="updateProduct('${data._id}')">Submit</button>
+            <button onClick="updateProduct('${data._id}')">Submit</button>
                 `;
+                
             })
 
             
     }
-
 
     function updateProduct(id){
         // console.log('updating');
