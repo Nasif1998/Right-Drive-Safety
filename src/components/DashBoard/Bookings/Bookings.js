@@ -8,8 +8,8 @@ const Bookings = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        // fetch('http://localhost:9003/booings?email=' +loggedInUser.email)
-        fetch('http://localhost:9003/bookings?email=' +loggedInUser.email)
+        // fetch('https://limitless-scrubland-20028.herokuapp.com/booings?email=' +loggedInUser.email)
+        fetch('https://limitless-scrubland-20028.herokuapp.com/bookings?email=' +loggedInUser.email)
         .then(res => res.json())
         .then(data => setBookings(data))
     },[])

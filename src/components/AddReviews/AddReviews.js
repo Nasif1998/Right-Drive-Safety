@@ -13,7 +13,7 @@ const AddReviews = () => {
             from: data.from,
             imageURL: imageURL
         };
-        const url = `http://localhost:9003/addReview`;
+        const url = `https://limitless-scrubland-20028.herokuapp.com/addReview`;
 
         console.log(eventData)
 

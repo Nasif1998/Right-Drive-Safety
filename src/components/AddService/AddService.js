@@ -13,7 +13,7 @@ const AddService = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:9003/addAService`;
+        const url = `https://limitless-scrubland-20028.herokuapp.com/addAService`;
 
         console.log(eventData)
 

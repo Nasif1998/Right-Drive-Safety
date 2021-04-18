@@ -19,7 +19,7 @@ const CheckOut = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:9003/checkout/${_id}`)
+        fetch(`https://limitless-scrubland-20028.herokuapp.com/checkout/${_id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [_id])
@@ -40,7 +40,7 @@ const CheckOut = () => {
     const handlePaymentSuccess = paymentId => {
         const newOrder = { ...loggedInUser, serviceName, price, paymentId, status: 'Pending', shipment: shippingData, orderTime: new Date() };
 
-        fetch('http://localhost:9003/addOrder', {
+        fetch('https://limitless-scrubland-20028.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ const ManageServices = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        fetch('http://localhost:9003/manageServices')
+        fetch('https://limitless-scrubland-20028.herokuapp.com/manageServices')
             .then(res => res.json())
             .then(data => setManages(data))
     }, [])

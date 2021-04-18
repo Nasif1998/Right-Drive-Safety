@@ -12,7 +12,7 @@ const AddAdmin = () => {
             email: data.email
         };
 
-        const url = `http://localhost:9003/addAdmin`;
+        const url = `https://limitless-scrubland-20028.herokuapp.com/addAdmin`;
 
         console.log(eventData)
 

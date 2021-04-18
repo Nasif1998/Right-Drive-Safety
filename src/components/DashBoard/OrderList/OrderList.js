@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 const OrderList = ({ orders }) => {
     const history = useHistory();
     const deleteOrder = (id, event) => {
-        const url = `http://localhost:9003/deleteOrder/${id}`
+        const url = `https://limitless-scrubland-20028.herokuapp.com/deleteOrder/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -20,7 +20,7 @@ const OrderList = ({ orders }) => {
     }
 
     function loadOrder(id) {
-        fetch(`http://localhost:9003/orderDetails/${id}`)
+        fetch(`https://limitless-scrubland-20028.herokuapp.com/orderDetails/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
