@@ -9,6 +9,7 @@ This is basically a online booking service for learning driving. In my project I
 4. You can also see your previous ordered service bookings.
 5. Admin can add and remove services from database and home page.
 
+Technologies: React.js,React-Router, Node.js, Express.js, MongoDB, Heroku, Firebase
 
 ## Live Link:
 [Click-here](https://dri-cub.web.app/)
